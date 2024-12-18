@@ -1,0 +1,34 @@
+.card {
+    width: 100px;
+    height: 150px;
+    perspective: 1000px;
+  }
+  
+  .card > div {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .card > div.flipped {
+    transform: rotateY(180deg);
+  }
+  
+  .card img {
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .card .front {
+    transform: rotateY(180deg);
+  }
+  
+  .card .back {
+    cursor: pointer;
+  }
